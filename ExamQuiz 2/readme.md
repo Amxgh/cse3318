@@ -25,6 +25,7 @@ After sorting, it becomes:
 | 12 | 17 | 19 | 37 | 50 | 50 |
 |----|----|----|----|----|----|
 | A  | F  | D  | C  | B  | E  |
+
 The above is stable sort. 
 
 Unstable sort would be:
