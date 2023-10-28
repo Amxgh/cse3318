@@ -13,10 +13,11 @@ nodePT reverseList(nodePT head){
 
     nodePT currNode = head;
     nodePT prevNode = NULL;
+    nodePT next;
 
     while (currNode != NULL)
     {
-        nodePT next = currNode -> next;
+        next = currNode -> next;
         currNode -> next = prevNode;
         prevNode = currNode;
         currNode = next;
