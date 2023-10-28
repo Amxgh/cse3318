@@ -4,7 +4,7 @@
 ## Recursive Tree Traversal
 
 - Time Complexity: O(N)
-    -  Asume do_something(h) is O(1)
+    -  Assume do_something(h) is O(1)
   
 - Space Complexity: O(TreeHeight) = O(N)
 Here N is the number of nodes of the tree to be traversed. 
@@ -78,6 +78,7 @@ A binary search tree is a binary tree where the item at each node is:
 - Greater than or equal to all items on the left subtree.
 - Less than or equal to all items on the right subtree.
 ![Alt text](image.png)
+
 In the following figure, the empty leaf could have the values 40, 41, 42, 43, 
 Therefore, 40 <= X <= 43
 
@@ -91,6 +92,7 @@ What traversal prints the data in increasing order?
 How to print in decreasing order?
 - Reverse Inorder traversal prints the data in decreasing order. (Right, Root, Left)
 ![Alt text](image-1.png)
+
 In the above image:
 - Inorder: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210
 - Preorder: 120, 20, 10, 70, 40, 30, 50, 60, 90, 80, 110, 100, 170, 140, 130, 160, 150, 190, 180, 210, 200
@@ -116,7 +118,8 @@ In the above image:
 
 
 ### Insertion
-__Naïve Insertion__
+__Naïve Insertion:__
+
 To insert an item, the simplest approach is to travel down the tree until you find a leaf position wher eit is appropriate to insert the new item.
 
 ### Performance of BST
@@ -130,20 +133,24 @@ If items are inserted:
 
 #### Right Rotation
 ![Alt text](image-3.png)
+
 P may or may not be a parent node.
 
 1. Set A's left pointer to B's right pointer. (A->left = B->right)
 2. Set B's right pointer to A. (B->right = A)
 3. IF A has a parent node P, set P's left or right pointer to B. (P->left OR P->right = B)
+
 ![Alt text](image-5.png)
 
 #### Left Rotation
 ![Alt text](image-5.png)
+
 P may or may not be a parent node.
 
 1. Set B's right pointer to A's left pointer. (B->right = A->left)
 2. Set A's left pointer to B. (A->left = B)
 3. IF B has a parent node P, set P's left or right pointer to A. (P->left OR P->right = A)
+   
 ![Alt text](image-3.png)
 
 ### Time Complexity
