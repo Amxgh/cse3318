@@ -77,9 +77,11 @@ The term "Search Tree" refers to a family of implementations, that may have diff
 A binary search tree is a binary tree where the item at each node is:
 - Greater than or equal to all items on the left subtree.
 - Less than or equal to all items on the right subtree.
+
+
 ![Alt text](image.png)
 
-In the following figure, the empty leaf could have the values 40, 41, 42, 43, 
+In the above figure, the empty leaf could have the values 40, 41, 42, 43, 
 Therefore, 40 <= X <= 43
 
 ### Traversal
