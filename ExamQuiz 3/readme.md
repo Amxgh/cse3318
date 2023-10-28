@@ -31,6 +31,7 @@ Here N is the number of nodes of the tree to be traversed.
   -    Example based on image: 1, 7, 3, 5, 4, 8, 9, 2
 - Levelorder: Breadth First Search (BFS)
   -    visit the nodes of the tree level by level (starting at level 0, that is, the root)  from left to right. 
+  -    Example based on image: 2, 3, 9, 7, 5, 8, 1, 4 
 
 The level of the root is defined to be 0.
 The level of each node is +1 of its parent.
