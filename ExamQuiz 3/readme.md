@@ -113,6 +113,11 @@ In the above image:
  - Amogh's Note: Given a node, to find it's predecessor, find the next lowest node. For example, in the image from traversal, the predecessor 130 is 120.
 
 
+- Height:
+  -  At least: theta(log<sub>2</sub>N)
+  -  At most: theta(N)
+
+
 - Minumum: leftmost node.
   -  Special Case: No left child => root is the minimum.
 - Maximum: rightmost node.
