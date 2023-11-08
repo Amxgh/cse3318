@@ -78,7 +78,7 @@ int arr[] = {38, 27, 43, 10};
    
     In this step, you are undoing the conquering. You are merging the subarrays and sorting them while merging.
 
-    Step 1: Merge the subarrays in a sorted order. That is, check if 38 <= 27. It isn't so insert 27 first and then 38.
+    Step 1: Merge the subarrays in a sorted order. That is, check if 38 <= 27. It isn't so insert 27 first and then 38. Then do the second set of numbers. Check if 43 <= 10. It isn't so insert 10 first and then 43.
     - {38}, {27} -> {27, 38}
     - {43}, {10} -> {10, 43}
   
