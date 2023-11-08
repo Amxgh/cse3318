@@ -41,7 +41,7 @@ void merge(int array[], int left, int mid, int right) {
 
     // Now we will begin updating the original array. For this, i and j were
     // initialized to zero. k was initialized to left because our given array
-    // might not start from. It's starting point is the number stored inside
+    // might not start from 0. It's starting point is the number stored inside
     // left. So, we set k to left, again, as an offset. If we are given an
     // entire array (not a sub-array),left will be equal to zero, that means k
     // will also start from zero.
@@ -64,27 +64,27 @@ void merge(int array[], int left, int mid, int right) {
 
     i=0; j=0; k=0;
 
-    Iteration 1:
+    ? Iteration 1:
       Is 1 <= 0? NO (If condition FAILED. Jumping to else block)
         => array[0] = 0; j++;
         => k++;
-    After Iteration 1:
+    ? After Iteration 1:
       i=0; j=1; k=1;
       array = {0,3,4,0,2}
 
-    Iteration 2:
+    ? Iteration 2:
       Is 1 <= 2? YES (If condition SATISFIED.)
         => array[1] = 1; i++;
         => k++
-    After Iteration 2:
+    ? After Iteration 2:
       i=1; j=1; k=2;
       array = {0,1,4,0,2}
 
-    Iteration 3:
+    ? Iteration 3:
       Is 3 <= 2? NO (If condition FAILED. Jumping to else block)
         => array[2] = 2; j++;
         => k++;
-    After Iteration 3:
+    ? After Iteration 3:
       i=1; j=2; k=3;
       array = {0,1,2,0,2}
 
