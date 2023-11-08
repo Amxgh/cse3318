@@ -1,6 +1,7 @@
 # Quick Sort
 
 ## Table of Contents
+
 - [Quick Sort](#quick-sort)
   - [Table of Contents](#table-of-contents)
   - [Properties](#properties)
@@ -11,14 +12,14 @@
   - [Code](#code)
 
 ## Properties
+
 - **Stable**: No
 - **Adaptive**: No
-- **Time Complexity**: 
+- **Time Complexity**:
   - Best: O(n log<sub>2</sub>n)
   - Average: O(n log<sub>2</sub>n)
   - Worst: O(n<sup>2</sup>)
 - **Space Complexity**: O(log<sub>2</sub>n)
- 
 
 ## Explanation
 
@@ -26,26 +27,28 @@ Similar to Merge sort, you need to understand what "Divide and Conquer" means.
 You can skip this section if you have already read through the "Divide and Conquer" section in the [merge sort readme](../Merge%20Sort/readme.md).
 
 ### Divide and Conquer
+
 ![Divide and Conquer](images/dc.png)
 
 In the above image, you can see that the problem is divided into smaller sub-problems. These sub-problems are then solved and the solutions are combined to give the final solution.
 
 Conquer means solving the sub-problems recursively. Divide means dividing the problem into smaller sub-problems.
 
-Scaling up the image: 
+Scaling up the image:
 
 ![Alt text](images/dc_scaled.png)
 
 ### Quick Sort
+
 Applying divide and conquer to sorting:
 
-The full problem would be to sort an entire array. 
+The full problem would be to sort an entire array.
 
 The sub-problems would be to sort smaller sub-arrays (small portions of the original array). The size of these small portions would be 1. That means, you keep subdividing the array until you reach arrays of size 1.
 
-
 To sort an array A[p .. r] where p is the first element and r is the last element, you do the following:
-1. **Divide:** 
+
+1. **Divide:**
    1. Choose any element in the array A[p .. r] and call this element the *pivot*.
    2. Rearrange the array such that all the elements less than or equal to the *pivot* are to the left of the *pivot* and all the elements greater than the *pivot* are to the right of the pivot. This is called *partitioning*.
    3. Note the index of the pivot after partitioning. Let's call this index q. That is, the pivot ends up at index q after partitioning.
@@ -57,11 +60,11 @@ To sort an array A[p .. r] where p is the first element and r is the last elemen
 2. **Conquer:**
     1. Recursively sort the array A[p .. q-1], that is, all elements to the left of the pivot. (Less than or equal to the pivot).
     2. Recursively sort the array A[q+1 .. r], that is, all elements to the right of the pivot. (Greater than the pivot).
-    
-    *Note:* Recursively sorting means you are calling the same function again. So, you are repeating steps 1 and 2 until the entire array is sorted. 
 
-3. **Combine:** 
-    There is nothing to be done here. The array is already sorted. Quick sort sorts in place so it does not require combining. 
+    *Note:* Recursively sorting means you are calling the same function again. So, you are repeating steps 1 and 2 until the entire array is sorted.
+
+3. **Combine:**
+    There is nothing to be done here. The array is already sorted. Quick sort sorts in place so it does not require combining.
 
 #### Performing Quick Sort on an Array
 
@@ -103,7 +106,7 @@ Considering the array to the left of the pivot, [2],let's call this "Subarray #2
 
 - Consider a new pivot. Pivot = 2
 - Perform partitioning
-- This is the base case so the function will do nothing. 
+- This is the base case so the function will do nothing.
 
 Considering the array to the right of the pivot, [5], let's call this "Subarray #3". Recursively call the function quick_sort(A, 2, 2) where A is the array, 2 is the first index and 2 is the last index.
 
@@ -115,7 +118,7 @@ Considering the array to the right of the pivot, [5], let's call this "Subarray 
 
 Now, Subarray #1 is fully sorted. The array is now [2, 3, 5].
 
-The entire array is now <ins>[2, 3, 5][6]</ins>[9, 7, 11, 12, 14, 10]. 
+The entire array is now <ins>[2, 3, 5][6]</ins>[9, 7, 11, 12, 14, 10].
 
 Considering the array to the right of the pivot, [9, 7, 11, 12, 14, 10], let's call this "Subarray #4". Recursively call the function quick_sort(A, 4, 9) where A is the array, 4 is the first index and 9 is the last index.
 
@@ -213,8 +216,8 @@ Array A = [2, 3, 5, 6, 7, 9, 10, 11, 12, 14].
 
 Now the entire array has been sorted.
 
-
 ## Code
+
 ```c
 void swap(int *SwapA, int *SwapB) {
   int temp = *SwapA;
