@@ -97,6 +97,13 @@ int arr[] = {38, 27, 43, 10};
 
 For a line by line explanation of the code, look at [merge_sort_explanation.c](merge_sort_explanation.c).
 
+The explanation is best viewed in a code editor with the following extension:
+Name: Better Comments
+Description: Improve your code commenting by annotating with alert, informational, TODOs, and more!
+VS Marketplace Link: <https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments>
+
+It will allow for color coded comments.
+
 ```c
 void merge(int array[], int left, int mid, int right) {
   
