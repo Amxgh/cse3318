@@ -7,8 +7,8 @@
   - [Properties](#properties)
   - [Explanation](#explanation)
     - [Divide and Conquer](#divide-and-conquer)
-    - [Merge Sort](#merge-sort-1)
-      - [Performing merge sort on an array](#performing-merge-sort-on-an-array)
+    - [Merge Sort Theory](#merge-sort-theory)
+      - [Merge Sort Example](#merge-sort-example)
   - [Code](#code)
 
 ## Properties
@@ -38,7 +38,7 @@ Scaling up the image:
 
 ![Alt text](images/dc_scaled.png)
 
-### Merge Sort
+### Merge Sort Theory
 
 Applying divide and conquer to sorting:
 
@@ -65,7 +65,7 @@ To sort an array A[p .. r] where p is the first element and r is the last elemen
 
 ![Alt text](images/ms_1.png)
 
-#### Performing merge sort on an array
+#### Merge Sort Example
 
 Consider the following:
 int arr[] = {38, 27, 43, 10};
