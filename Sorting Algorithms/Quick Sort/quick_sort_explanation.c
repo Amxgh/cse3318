@@ -80,6 +80,36 @@ int partition(int A[], int low, int high) {
 
         We return i+1, that is, 2
 
+    ? Call #2:
+        A = {1,0,2,3,4}
+        low = 0
+        high = 1
+        So the subarray we are dealing with is {1,0}
+        For the sake of the explanation, let A = {1,0} now.
+
+        pivot = A[high] = A[1] = 0
+        i = low - 1 = 0 - 1 = -1
+        j = low = 0
+
+        * Iteration 1:
+            - A[j] = A[0] = 1
+            - Is (A[j] < pivot) that is, Is (1 < 0)?
+                - No, so we do nothing
+        * Post Iteration 1: A = {1,0}, i = -1, j = 0
+
+        * Iteration 2: (j is incremented in the for loop, so j = 1)
+            - A[j] = A[1] = 0
+            - Is (A[j] < pivot) that is, Is (0 < 0)?
+                - No, so we do nothing
+        * Post Iteration 2: A = {1,0}, i = -1, j = 1
+
+        The for loop has ended, so we swap A[i+1] and A[high], that is, A[0] and
+        A[1]
+        Post Swap: A = {0,1}
+
+        Actual A = {0,1,2,3,4}
+        We return i+1, that is, 0
+
     */
 
     int i, j = 0;
@@ -104,13 +134,38 @@ void QuickSort(int A[], int low, int high) {
     high = 4
 
     ? Call #1 to partition():
-    ndx = partition(A, 0, 4)   REFER TO CALL #1 in the comments of Partition()
+    A = {1,3,4,0,2}; low = 0; high = 4
+    ndx = partition(A, 0, 4)
+    REFER TO CALL #1 in the comments of Partition()
     ndx = 2 (returned value from Call #1)
 
-    ? Recursive Call: QuickSort(A, low, ndx - 1): QuickSort(A, 0, 1)
-    ? Call #2 to partition():
-    ndx = partition(A, 0, 1)   REFER TO CALL #2 in the comments of Partition()
+        ? Recursive Call: QuickSort(A, low, ndx - 1): QuickSort(A, 0, 1)
+        ? Call #2 to partition():
+        A = {1,3,4,0,2}; low = 0; high = 1
+        ndx = partition(A, 0, 1)
+        REFER TO CALL #2 in the comments of Partition()
+        ndx - 0 (returned value from Call #2) // Array is now {0,1,2,3,4}
 
+            ? Recursive Call: QuickSort(A, low, ndx - 1): QuickSort(A, 0, -1)
+            ! Called after Call #2 returns a value to ndx. (Line 159)
+            A = {0,1,2,3,4}; low = 0; high = -1
+            Does nothing because low >= high (0 >= -1)
+
+            ? Recursive Call:
+            ! Called after the above recursive call returns a value (Line 161)
+
+            QuickSort(A, ndx + 1, high): QuickSort(A, 1, 1)
+            A = {0,1,2,3,4}; low = 1; high = 1
+            Does nothing because low >= high (1 >= 1)
+
+        Call #2 returns to Call #1
+        The array is now A = {0,1,2,3,4}
+
+        ? Recursive Call: QuickSort(A, ndx + 1, high): QuickSort(A, 3, 4)
+        ? Call #3 to partition():
+        A = {0,1,2,3,4}; low = 3; high = 4
+        ndx = partition(A, 3, 4)
+`
     */
 
     if (low < high) {
