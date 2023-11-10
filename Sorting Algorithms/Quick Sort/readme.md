@@ -7,8 +7,8 @@
   - [Properties](#properties)
   - [Explanation](#explanation)
     - [Divide and Conquer](#divide-and-conquer)
-    - [Quick Sort](#quick-sort-1)
-      - [Performing Quick Sort on an Array](#performing-quick-sort-on-an-array)
+    - [Quick Sort Theory](#quick-sort-theory)
+      - [Quick Sort Example](#quick-sort-example)
   - [Code](#code)
 
 ## Properties
@@ -38,7 +38,7 @@ Scaling up the image:
 
 ![Alt text](images/dc_scaled.png)
 
-### Quick Sort
+### Quick Sort Theory
 
 Applying divide and conquer to sorting:
 
@@ -66,7 +66,7 @@ To sort an array A[p .. r] where p is the first element and r is the last elemen
 3. **Combine:**
     There is nothing to be done here. The array is already sorted. Quick sort sorts in place so it does not require combining.
 
-#### Performing Quick Sort on an Array
+#### Quick Sort Example
 
 Assume the array is [9, 7, 5, 11, 12, 2, 14, 3, 10, 6]. Call the function quick_sort(A, 0, 9) where A is the array, 0 is the first index and 9 is the last index.
 
@@ -118,7 +118,7 @@ Considering the array to the right of the pivot, [5], let's call this "Subarray 
 
 Now, Subarray #1 is fully sorted. The array is now [2, 3, 5].
 
-The entire array is now <ins>[2, 3, 5][6]</ins>[9, 7, 11, 12, 14, 10].
+The entire array is now <ins>\[2, 3, 5][6]</ins>[9, 7, 11, 12, 14, 10].
 
 Considering the array to the right of the pivot, [9, 7, 11, 12, 14, 10], let's call this "Subarray #4". Recursively call the function quick_sort(A, 4, 9) where A is the array, 4 is the first index and 9 is the last index.
 
@@ -162,7 +162,7 @@ Considering the array to the right of the pivot, [9], let's call this "Subarray 
 
 Now, Subarray #5 is fully sorted. The array is now [7, 9].
 
-The entire array is now <ins>[2, 3, 5][6][7, 9][10]</ins>[11, 12, 14].
+The entire array is now <ins>\[2, 3, 5]\[6]\[7, 9][10]</ins>[11, 12, 14].
 
 Considering the array to the right of the pivot, [11, 12, 14], let's call this "Subarray #7". Recursively call the function quick_sort(A, 7, 9) where A is the array, 7 is the first index and 9 is the last index.
 
@@ -210,7 +210,7 @@ Considering the array to the left of the pivot, [11], let's call this "Subarray 
 
 Now, Subarray #8 is fully sorted. The array is now [11, 12].
 
-The entire array is now <ins>[2, 3, 5][6][7, 9][10][11, 12][14]</ins>.
+The entire array is now <ins>\[2, 3, 5]\[6]\[7, 9]\[10]\[11, 12][14]</ins>.
 
 Array A = [2, 3, 5, 6, 7, 9, 10, 11, 12, 14].
 
