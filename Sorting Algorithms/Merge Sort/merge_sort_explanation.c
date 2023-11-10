@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+/*
+NOTE:
+!
+?
+*
+
+Are placeholders to colorcode comments. They make the comments easier to read.
+
+In order to see colors, you need to use
+https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
+*/
+
 void merge(int array[], int left, int mid, int right) {
     /*
     Assume the array is {1,3,4,0,2}
